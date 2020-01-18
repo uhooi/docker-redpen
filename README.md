@@ -8,13 +8,13 @@ Docker image for RedPen.
 
 ### Shell
 
-#### Pull the Docker image from Docker Hub:
+##### Pull the Docker image from Docker Hub:
 
 ```
 $ docker pull uhooi/redpen:latest
 ```
 
-#### Create a container from the image and run it:
+##### Create a container from the image and run it:
 
 ```
 $ docker run -it uhooi/redpen
