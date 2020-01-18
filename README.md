@@ -10,18 +10,18 @@ Docker image for RedPen.
 
 ##### Pull the Docker image from Docker Hub:
 
-```
+```bash
 $ docker pull uhooi/redpen:latest
 ```
 
 ##### Create a container from the image and run it:
 
-```
+```bash
 $ docker run -it uhooi/redpen
 ```
 
 ### Dockerfile
 
-```docker:Dockerfile
+```dockerfile
 FROM uhooi/redpen:latest
 ```
