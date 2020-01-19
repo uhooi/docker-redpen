@@ -20,15 +20,18 @@ jobs:
         redpen_version: [latest, 1.10.4]
     steps:
     - uses: actions/checkout@v1
+
     - name: Build Docker image
       run: docker build -t "${DOCKER_USER}/${DOCKER_REPO}" "./${{ matrix.redpen_version }}"
+
     - name: Create a tag
       run: |
         export IMAGE_ID=$(docker images "${DOCKER_USER}/${DOCKER_REPO}" -q)
         docker tag ${IMAGE_ID} "${DOCKER_USER}/${DOCKER_REPO}:${{ matrix.redpen_version }}"
         unset IMAGE_ID
+
     - name: Login Docker Hub
       run: echo "${DOCKER_PASS}" | docker login --username ${DOCKER_USER} --password-stdin
+
     - name: Push to Docker Hub
-      run: |
-        docker push "${DOCKER_USER}/${DOCKER_REPO}:${{ matrix.redpen_version }}"
+      run: docker push "${DOCKER_USER}/${DOCKER_REPO}:${{ matrix.redpen_version }}"
