@@ -1,6 +1,7 @@
 # docker-redpen
 
-[![Docker Hub](http://dockeri.co/image/uhooi/redpen)](https://hub.docker.com/r/uhooi/redpen)
+[![](http://dockeri.co/image/uhooi/redpen)](https://hub.docker.com/r/uhooi/redpen)  
+[![](https://github.com/uhooi/docker-redpen/workflows/CD/badge.svg)](https://github.com/uhooi/docker-redpen/actions?query=workflow%3ACD)
 
 Docker image for RedPen.
 
