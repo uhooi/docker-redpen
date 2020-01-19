@@ -21,7 +21,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build Docker image
-      run: docker build -t "${DOCKER_USER}/${DOCKER_REPO}" .
+      run: docker build -t "${DOCKER_USER}/${DOCKER_REPO}" "./${{ matrix.redpen_version }}"
     - name: Create a tag
       run: |
         export IMAGE_ID=$(docker images "${DOCKER_USER}/${DOCKER_REPO}" -q)
