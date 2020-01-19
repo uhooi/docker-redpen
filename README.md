@@ -17,11 +17,14 @@ $ docker pull uhooi/redpen:latest
 ##### Create a container from the image and run it:
 
 ```bash
-$ docker run -it uhooi/redpen
+# Output RedPen version
+$ docker run --rm uhooi/redpen --version
+1.10.4
+
+# Run RedPen example
+$ docker run --rm -v $PWD:/work uhooi/redpen --lang ja --format review --conf redpen-conf.xml --limit 0 foo.re
 ```
 
-### Dockerfile
+### GitHub Actions
 
-```dockerfile
-FROM uhooi/redpen:latest
-```
+TBD
